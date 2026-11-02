@@ -40,6 +40,7 @@ export function DiscordContact() {
             src="/contact/botfather-banner.jpg"
             alt="ASCII Terminal Matrix Banner"
             fill
+            sizes="(max-width: 768px) 100vw, 600px"
             className="object-cover opacity-50 mix-blend-luminosity"
             priority
           />
