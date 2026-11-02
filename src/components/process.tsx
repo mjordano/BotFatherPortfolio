@@ -4,7 +4,7 @@ import { container, sectionTitle, stagger } from "./ui";
 
 export function Process() {
   return (
-    <section id="process" aria-labelledby="process-title" className="relative border-t border-line py-24 md:py-36">
+    <section id="process" aria-labelledby="process-title" className="relative border-t border-line py-16 sm:py-24 md:py-36">
       <div className={container}>
         <Reveal>
           <h2 id="process-title" className={`rv ${sectionTitle}`}>
@@ -12,12 +12,12 @@ export function Process() {
           </h2>
         </Reveal>
 
-        <Reveal className="relative mt-14 md:mt-20">
+        <Reveal className="relative mt-10 md:mt-20">
           <span
             aria-hidden="true"
             className="timeline-line absolute bottom-3 left-[7px] top-3 w-px bg-line-strong md:inset-x-0 md:bottom-auto md:top-[7px] md:h-px md:w-auto"
           />
-          <ol className="relative grid gap-12 md:grid-cols-4 md:gap-10">
+          <ol className="relative grid gap-10 md:grid-cols-4 md:gap-10">
             {buildProcess.steps.map((step, i) => (
               <li key={step.label} className="rv relative pl-10 md:pl-0 md:pt-12" style={stagger(i + 1)}>
                 <span

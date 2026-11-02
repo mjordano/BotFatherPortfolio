@@ -5,8 +5,8 @@ import { DiscordContact } from "./discord-contact";
 
 export function Contact() {
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative border-t border-line py-24 md:py-36">
-      <div className={`${container} grid gap-14 lg:grid-cols-12 lg:gap-10`}>
+    <section id="contact" aria-labelledby="contact-title" className="relative border-t border-line py-16 sm:py-24 md:py-36">
+      <div className={`${container} grid gap-10 sm:gap-14 lg:grid-cols-12 lg:gap-10`}>
         <Reveal className="lg:col-span-5">
           <div className="rv inline-flex items-center gap-2 rounded-full border border-[#22e273]/30 bg-[#22e273]/10 px-3 py-1 font-mono text-xs text-[#22e273] mb-4">
             <span className="size-2 rounded-full bg-[#22e273]" />

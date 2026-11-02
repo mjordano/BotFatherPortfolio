@@ -332,14 +332,14 @@ export function CicoDemo() {
         {activeTab === "dashboard" && (
           <div className="space-y-4">
             {/* Dashboard Sub-nav */}
-            <div className="flex flex-wrap items-center justify-between border-b border-[#2b2d31] pb-2.5 text-xs text-[#949ba4]">
-              <div className="flex gap-4 font-mono">
-                <span className="text-white font-semibold">Scheduled</span>
-                <span className="hover:text-white cursor-pointer">Shift History</span>
-                <span className="hover:text-white cursor-pointer">Analytics</span>
-                <span className="hover:text-white cursor-pointer">Channels &amp; Models</span>
+            <div className="flex flex-wrap items-center justify-between border-b border-[#2b2d31] pb-2.5 text-xs text-[#949ba4] gap-2">
+              <div className="flex items-center gap-3 sm:gap-4 font-mono overflow-x-auto scrollbar-none pb-1 sm:pb-0">
+                <span className="text-white font-semibold whitespace-nowrap">Scheduled</span>
+                <span className="hover:text-white cursor-pointer whitespace-nowrap">Shift History</span>
+                <span className="hover:text-white cursor-pointer whitespace-nowrap">Analytics</span>
+                <span className="hover:text-white cursor-pointer whitespace-nowrap">Channels &amp; Models</span>
               </div>
-              <div className="flex items-center gap-2 font-mono text-[11px]">
+              <div className="flex items-center gap-2 font-mono text-[11px] shrink-0">
                 <span className="size-2 rounded-full bg-[#23a55a] animate-pulse" />
                 <span>01:13:16 UTC+1</span>
               </div>

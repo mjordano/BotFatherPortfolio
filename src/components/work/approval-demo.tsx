@@ -267,7 +267,7 @@ export function ApprovalDemo() {
                   <button
                     type="button"
                     onClick={() => settle("approved", "approved")}
-                    className="flex cursor-pointer items-center gap-1.5 rounded-[4px] bg-[#248046] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:bg-[#1a6334] active:scale-[0.98]"
+                    className="flex-1 sm:flex-none flex cursor-pointer items-center justify-center gap-1.5 rounded-[4px] bg-[#248046] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:bg-[#1a6334] active:scale-[0.98]"
                   >
                     <CheckIcon size={15} weight="bold" aria-hidden="true" />
                     <span>Approve</span>
@@ -276,16 +276,16 @@ export function ApprovalDemo() {
                   <button
                     type="button"
                     onClick={() => settle("changes-requested", "changes requested")}
-                    className="flex cursor-pointer items-center gap-1.5 rounded-[4px] bg-[#4e5058] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:bg-[#6d6f78] active:scale-[0.98]"
+                    className="flex-1 sm:flex-none flex cursor-pointer items-center justify-center gap-1.5 rounded-[4px] bg-[#4e5058] px-3.5 py-2 text-xs font-semibold text-white shadow-sm transition-all hover:bg-[#6d6f78] active:scale-[0.98]"
                   >
                     <PencilSimpleIcon size={15} weight="bold" aria-hidden="true" />
-                    <span>Request Changes</span>
+                    <span className="whitespace-nowrap">Request Changes</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setActiveTab("chatter")}
-                    className="flex cursor-pointer items-center gap-1.5 rounded-[4px] bg-[#4e5058]/60 px-3.5 py-2 text-xs font-semibold text-[#dbdee1] transition-all hover:bg-[#4e5058] hover:text-white"
+                    className="w-full sm:w-auto flex cursor-pointer items-center justify-center gap-1.5 rounded-[4px] bg-[#4e5058]/60 px-3.5 py-2 text-xs font-semibold text-[#dbdee1] transition-all hover:bg-[#4e5058] hover:text-white"
                   >
                     <span>Take me there</span>
                     <ArrowSquareOutIcon size={14} weight="bold" aria-hidden="true" />

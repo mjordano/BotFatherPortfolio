@@ -48,14 +48,14 @@ export function Work() {
           </p>
 
           {/* Interactive Showcase Switcher */}
-          <div className="rv mt-10 flex flex-wrap items-center gap-2 border-b border-line pb-4" style={stagger(2)}>
-            <span className="mr-2 font-mono text-xs uppercase tracking-wider text-faint">
+          <div className="rv mt-10 flex items-center gap-2 overflow-x-auto pb-4 border-b border-line scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden sm:flex-wrap" style={stagger(2)}>
+            <span className="mr-2 font-mono text-xs uppercase tracking-wider text-faint shrink-0">
               Interactive Demos:
             </span>
             <button
               type="button"
               onClick={() => setActiveShowcase("mmapp")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 font-mono text-xs transition-all ${
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
                 activeShowcase === "mmapp"
                   ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
                   : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"
@@ -66,7 +66,7 @@ export function Work() {
             <button
               type="button"
               onClick={() => setActiveShowcase("cico")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 font-mono text-xs transition-all ${
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
                 activeShowcase === "cico"
                   ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
                   : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"
@@ -77,7 +77,7 @@ export function Work() {
             <button
               type="button"
               onClick={() => setActiveShowcase("training")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 font-mono text-xs transition-all ${
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
                 activeShowcase === "training"
                   ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
                   : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"
@@ -88,7 +88,7 @@ export function Work() {
             <button
               type="button"
               onClick={() => setActiveShowcase("revtrack")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 font-mono text-xs transition-all ${
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
                 activeShowcase === "revtrack"
                   ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
                   : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"
@@ -99,7 +99,7 @@ export function Work() {
             <button
               type="button"
               onClick={() => setActiveShowcase("tiktok")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 font-mono text-xs transition-all ${
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
                 activeShowcase === "tiktok"
                   ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
                   : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"
@@ -110,7 +110,7 @@ export function Work() {
             <button
               type="button"
               onClick={() => setActiveShowcase("cb")}
-              className={`cursor-pointer rounded-full px-4 py-1.5 font-mono text-xs transition-all ${
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
                 activeShowcase === "cb"
                   ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
                   : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"

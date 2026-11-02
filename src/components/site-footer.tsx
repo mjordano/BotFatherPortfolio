@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div>
           <p className="text-sm text-muted">{site.tagline}</p>
         </div>
-        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 font-mono text-[13px] text-muted">
+        <div className="flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-3 font-mono text-xs sm:text-[13px] text-muted">
           <a
             href="#contact"
             className="flex items-center gap-1.5 rounded-sm transition-colors hover:text-text"
