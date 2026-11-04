@@ -68,6 +68,22 @@ export const featured: Project = {
 
 export const projects: Project[] = [
   {
+    slug: "discord-cloner",
+    name: "GuildCloner: Server Migration Engine",
+    category: "Infrastructure & DevOps",
+    summary:
+      "Automated 1-click Discord server cloner and template migration engine built for agencies scaling client servers and operational layouts. Faithfully replicates complex role hierarchies, channel trees, voice bitrates, and granular channel permission overwrites — strictly guaranteeing source server read-only isolation.",
+    features: [
+      "Strict Read-Only Source Guarantee: code-enforced ReadOnlyViolationError ensures Server A is never modified",
+      "Full role hierarchy synchronization: replicates colors, permissions, hoist state, and sort order",
+      "Channel architecture sync: clones text, announcements, categories, and voice bitrates (safe-capped to server tier)",
+      "Granular permission matrix: remaps complex role and member permission overwrites to destination guild",
+      "1-Click interactive CLI runner with automated wipe safeguards, config auto-saving, and rate-limit backoff",
+    ],
+    platforms: ["Discord", "Desktop"],
+    tags: ["Python", "discord.py", "AsyncIO", "Discord API", "CLI"],
+  },
+  {
     slug: "cico-supervisor",
     name: "CICO Supervisor & Staff Analytics",
     category: "Operations & Analytics",
