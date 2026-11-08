@@ -9,6 +9,7 @@ import { ApprovalDemo } from "./approval-demo";
 import { CbLiveDemo } from "./cb-live-demo";
 import { CicoDemo } from "./cico-demo";
 import { ClonerDemo } from "./cloner-demo";
+import { OffBotDemo } from "./offbot-demo";
 import { RevTrackDemo } from "./revtrack-demo";
 import { TikTokLiveDemo } from "./tiktok-live-demo";
 import { TrainingDemo } from "./training-demo";
@@ -16,10 +17,11 @@ import { TrainingDemo } from "./training-demo";
 const showExampleTags = process.env.NODE_ENV !== "production";
 
 export function Work() {
-  const [activeShowcase, setActiveShowcase] = useState<"mmapp" | "cico" | "cloner" | "revtrack" | "training" | "tiktok" | "cb">("mmapp");
+  const [activeShowcase, setActiveShowcase] = useState<"mmapp" | "cico" | "cloner" | "offbot" | "revtrack" | "training" | "tiktok" | "cb">("mmapp");
 
   const cicoProject = projects.find((p) => p.slug === "cico-supervisor") ?? featured;
   const clonerProject = projects.find((p) => p.slug === "discord-cloner") ?? featured;
+  const offbotProject = projects.find((p) => p.slug === "offbot") ?? featured;
   const tiktokProject = projects.find((p) => p.slug === "tiktok-live-alert") ?? featured;
   const cbProject = projects.find((p) => p.slug === "live-alert") ?? featured;
   const revtrackProject = projects.find((p) => p.slug === "revtrack") ?? featured;
@@ -32,13 +34,15 @@ export function Work() {
         ? cicoProject
         : activeShowcase === "cloner"
           ? clonerProject
-          : activeShowcase === "revtrack"
-            ? revtrackProject
-            : activeShowcase === "training"
-              ? trainingProject
-              : activeShowcase === "tiktok"
-                ? tiktokProject
-                : cbProject;
+          : activeShowcase === "offbot"
+            ? offbotProject
+            : activeShowcase === "revtrack"
+              ? revtrackProject
+              : activeShowcase === "training"
+                ? trainingProject
+                : activeShowcase === "tiktok"
+                  ? tiktokProject
+                  : cbProject;
 
   return (
     <section id="work" aria-labelledby="work-title" className="relative py-24 md:py-36">
@@ -88,6 +92,17 @@ export function Work() {
               }`}
             >
               GuildCloner (Migration Engine)
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveShowcase("offbot")}
+              className={`shrink-0 cursor-pointer rounded-full px-3.5 py-1.5 font-mono text-xs transition-all ${
+                activeShowcase === "offbot"
+                  ? "bg-accent font-semibold text-accent-ink shadow-[0_0_20px_rgb(34_226_115/0.25)]"
+                  : "border border-line bg-line/30 text-muted hover:border-line-strong hover:text-fg"
+              }`}
+            >
+              OffBot (Roster Pipeline)
             </button>
             <button
               type="button"
@@ -172,6 +187,8 @@ export function Work() {
               <CicoDemo />
             ) : activeShowcase === "cloner" ? (
               <ClonerDemo />
+            ) : activeShowcase === "offbot" ? (
+              <OffBotDemo />
             ) : activeShowcase === "training" ? (
               <TrainingDemo />
             ) : activeShowcase === "revtrack" ? (
@@ -188,13 +205,15 @@ export function Work() {
                   ? "Live interactive simulator: switch between Discord clock-in reactions, SaaS web analytics, and shift coverage."
                   : activeShowcase === "cloner"
                     ? "Interactive migration simulator: 1-click replicate server roles, channel trees, and permissions with read-only source isolation."
-                    : activeShowcase === "training"
-                      ? "Live interactive dashboard: 69 trainee tickets, stage progression, 24h announcements, and rotation bumps."
-                      : activeShowcase === "revtrack"
-                        ? "Dataflow architecture: watch multi-inbox revenue reports ingest into the Black Box and sync to the master sheet."
-                        : activeShowcase === "tiktok"
-                          ? "Live interactive simulator: test instant TikTok livestream alerts, STOP CHATTING locks, and stream-end notices."
-                          : "Live interactive simulator: 25s Chaturbate monitoring daemon, @here livestream alerts, and creator status board."}
+                    : activeShowcase === "offbot"
+                      ? "Interactive roster simulator: test /off Discord requests, dynamic capacity limits, and two-way Google Sheets approvals."
+                      : activeShowcase === "training"
+                        ? "Live interactive dashboard: 69 trainee tickets, stage progression, 24h announcements, and rotation bumps."
+                        : activeShowcase === "revtrack"
+                          ? "Dataflow architecture: watch multi-inbox revenue reports ingest into the Black Box and sync to the master sheet."
+                          : activeShowcase === "tiktok"
+                            ? "Live interactive simulator: test instant TikTok livestream alerts, STOP CHATTING locks, and stream-end notices."
+                            : "Live interactive simulator: 25s Chaturbate monitoring daemon, @here livestream alerts, and creator status board."}
             </p>
           </div>
         </Reveal>
@@ -262,6 +281,17 @@ export function Work() {
                   </ul>
 
                   {/* Embedded Interactive Demos within accordion drawers */}
+                  {p.slug === "offbot" && (
+                    <div className="mt-4 md:col-span-12">
+                      <div className="mb-3 flex items-center justify-between border-t border-line pt-4">
+                        <span className="font-mono text-xs text-accent">
+                          ● Interactive Discord Off-Day Flow &amp; Master Google Sheet Synchronizer
+                        </span>
+                      </div>
+                      <OffBotDemo />
+                    </div>
+                  )}
+
                   {p.slug === "discord-cloner" && (
                     <div className="mt-4 md:col-span-12">
                       <div className="mb-3 flex items-center justify-between border-t border-line pt-4">

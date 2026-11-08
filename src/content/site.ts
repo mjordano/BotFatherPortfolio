@@ -68,6 +68,22 @@ export const featured: Project = {
 
 export const projects: Project[] = [
   {
+    slug: "offbot",
+    name: "OffBot: Roster & Off-Day Pipeline",
+    category: "Operations & Scheduling",
+    summary:
+      "End-to-end staff off-day scheduling and roster synchronization engine bridging Discord chatters and master Google Sheets rosters. Features timezone-aware weekly scheduling windows, live capacity limit enforcement, two-way Google Apps Script approval synchronization, and thread-safe sheet writes.",
+    features: [
+      "Interactive Discord Request Flow: pop-up questionnaires, multi-date picker menus, and /off slash commands with instant validation",
+      "Automated Scheduling Window & Quotas: strictly enforces Mon-Thu booking windows for next week and live per-day capacity caps",
+      "Safe Google Sheets Synchronization: appends request logs while safeguarding existing formulas, status columns, and roster overviews",
+      "Two-Way Sheet-to-Discord Approval: Google Apps Script triggers onEdit events in the sheet to update Discord embeds and notify staff in real time",
+      "In-process Mutex & Concurrency Guard: serializes concurrent sheet operations to eliminate race conditions during high-volume shift changes",
+    ],
+    platforms: ["Discord", "Google Sheets"],
+    tags: ["Node.js", "discord.js", "Google Sheets API", "Google Apps Script", "Docker", "Luxon"],
+  },
+  {
     slug: "discord-cloner",
     name: "GuildCloner: Server Migration Engine",
     category: "Infrastructure & DevOps",
